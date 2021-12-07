@@ -1,0 +1,550 @@
+@import '_fonts'
+@import '_media'
+
+.container
+    padding-left: 0px
+    padding-right: 0px
+    @include _1170
+        max-width: 1200px
+    
+.header
+    width: 100%
+    height: 1600px
+    background: url("../image/header-back.webp") 0 0/ auto 1600px no-repeat
+    @include _979
+        height: 844px
+        background: url("../image/header-back.webp") 50% no-repeat 
+    &__menu
+        width: 100%
+        margin: 0 auto
+        padding-top: 25px
+        @include _979
+            display: flex
+            align-items: center
+            justify-content: space-between            
+
+    &__logo
+        text-align: center
+    &__logo img
+        width: 100%
+        @include _350 
+            width: auto
+            height: auto
+        @include _979
+            margin-left: 34px
+                
+    &__links
+        display: none
+        @include _979
+            display: block
+            width: 455px
+            height: 105px
+            background: url("../image/header-menu.webp") 0 0/455px 105px no-repeat
+    
+    &__links-mobile
+        display: block
+        width: 300px
+        height: 105px
+        margin: 20px auto 0
+        background: url("../image/header-menu.webp") 0 0/300px 105px no-repeat
+        @include _480
+            display: none
+    
+    &__buttons
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%        
+    &__buttons-mobile
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        height: 100%
+        @include _400 
+            margin-top: 50px
+        @include _480
+            display: none
+
+    &__button
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        line-height: 23px
+        text-decoration-line: underline
+        color: #715D00
+        margin: 0 20px
+    &__button-mobile
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        line-height: 23px
+        text-decoration-line: underline
+        color: #715D00
+        @include _480
+            display: none
+    &__button:nth-child(1)
+        display: none
+        @include _979
+            display: block
+    &__button:nth-child(2)
+        display: none  
+        @include _979
+            display: block 
+
+    &__title
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 35px        
+        line-height: 40px
+        text-align: center
+        color: #F9E994
+        margin-top: 24px
+        @include _600             
+            max-width: 578px
+            margin: 16px auto 0px
+            font-size: 52px
+            line-height: 61px
+            position: relative
+            left: -9px   
+    &__product
+        display: flex
+        flex-direction: column
+        margin: 10px 20px 0
+        @include _979
+            flex-direction: row
+            margin: 30px 20px 0
+    &__about
+        margin-top: 24px
+        order: 3
+        @include _979
+            margin-top: 0
+            order: 1
+    &__about-text
+        font-family: Roboto
+        font-weight: bold
+        font-size: 24px
+        line-height: 34px
+        color: #F6F7E4
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+        text-align: center
+        @include _979
+            width: 80%
+            font-size: 26px 
+            text-align: left  
+            margin-top: 29px  
+        @include _1170
+            width: 100%
+    &__about-list
+        background: #7FB3E1
+        border-radius: 20px
+        margin-top: 30px
+        padding-top: 20px
+        padding-bottom: 20px
+        list-style-type: none 
+        @include _979 
+            width: 70% 
+            margin-top: 60px
+            padding: 36px 0px 34px 50px        
+        @include _1170
+            max-width: 272px
+                   
+    &__about-li
+        position: relative   
+        font-family: Roboto
+        font-weight: bold
+        font-size: 18px
+        line-height: 26px
+        color: #DFE4DE
+        display: flex
+        align-items: center
+        @include _979
+            font-size: 22px 
+    &__about-li::before
+        content: url('../image/header-marks.webp')
+        display: block  
+        position: relative
+        left: -16px 
+        bottom: -2px   
+    &__about-li:nth-child(2)
+        margin-top: 20px
+    &__about-li:nth-child(3)
+        margin-top: 18px
+        @include _1170
+            max-width: 200px
+
+    &__image
+        width: 100%
+        order: 1
+        position: relative
+        margin-top: 20px
+        position: relative
+        z-index: 100
+        @include _979
+            display: none            
+        @include _1170
+            display: block
+            max-width: 720px
+            order: 2
+    &__image img 
+        width: 100%
+        @include _979
+            width: 720px
+            right: -60px
+            top: 29px
+            position: absolute 
+        @include _1170
+            width: 720px
+            right: -60px
+            top: 29px
+            position: absolute 
+    &__order
+        margin: 20px auto
+        order: 3
+        max-width: 270px
+        background: #FDFCFC
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 20px 20px 10px 10px
+        @include _979
+            margin-top: 0
+            position: relative
+            right: 18px
+    &__order-top
+        width: 100%
+        height: 166px
+        background: #7EB2E1
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25)
+        border-radius: 10px 10px 0px 0px
+        position: relative
+        margin-top: -1px
+        text-align: center
+        &::after
+            content: ''
+            position: absolute
+            top: 99.6%
+            left: 0px
+            pointer-events: none
+            border-style: solid
+            border-color: transparent
+            border-width: 20px 135px 0 135px
+            height: 0
+            width: 0
+            border-top-color: #7EB2E1
+            margin-left: 0px
+    &__order-registration
+        margin-top: 20px
+    &__order-top-title
+        font-family: Roboto        
+        font-weight: bold
+        font-size: 33px
+        line-height: 39px
+        color: #483C08
+        padding-top: 19px
+    &__order-top-timer
+        font-family: Roboto
+        font-weight: bold
+        font-size: 36px
+        line-height: 42px
+        color: #F6E791
+        margin-top: 8px
+    
+    &__order-top-price
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 3px
+    &__old-price
+        font-family: Roboto
+        font-weight: bold
+        font-size: 30px
+        line-height: 35px
+        color: #6B6B6B
+        margin: 0 10px
+        position: relative
+        &::before
+            content: ''
+            width: 100%
+            top: 15px
+            height: 2px
+            background-color: #F6BE91
+            transform: rotate(162.55deg)
+            position: absolute
+    &__new-price
+        font-family: Roboto
+        font-weight: bold
+        font-size: 36px
+        line-height: 42px
+        color: #483C08
+        margin: 0 10px
+    
+    &__order-registration
+        margin: 20px auto 0px
+        text-align: center
+
+    &__order-name
+        background: #F3EFEF
+        border-radius: 30px
+        border: none
+        margin-top: 20px   
+        position: relative       
+           
+    &__order-name[placeholder]
+        font-family: Roboto
+        font-weight: bold
+        font-size: 16px
+        line-height: 19px
+        color: #777777
+        width: 180px
+        height: 50px
+        padding-left: 70px    
+        &:hover
+            outline-color: #7EB2E1   
+        &:focus
+            outline-color: #7EB2E1  
+    &__order-number
+        background: #F3EFEF
+        border-radius: 30px        
+        border: none
+        margin-top: 17px 
+        position: relative 
+        &:hover
+            outline-color: #7EB2E1   
+        &:focus
+            outline-color: #7EB2E1           
+    &__order-number[placeholder]
+        font-family: Roboto
+        font-weight: bold
+        font-size: 16px
+        line-height: 19px
+        color: #777777
+        width: 180px
+        height: 50px
+        padding-left: 70px
+        
+    .mark-one, .mark-two
+        position: relative
+        &::before
+            content: url('../image/header-users.webp')
+            position: absolute
+            width: 24px
+            height: 24px
+            right: 201px
+            top: -4px
+    &__order-submit
+        background: #A1D337
+        border-radius: 30px
+        padding: 8px 63px        
+        border: none
+        margin-top: 10px
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 30px
+        line-height: 35px
+        color: #FFFFFF
+        transition: .5s
+        cursor: pointer
+        &:hover
+            background: #91cc11
+
+    &__order-data
+        font-family: Roboto
+        font-size: 18px
+        line-height: 21px
+        text-align: center
+        color: #444444
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        margin-top: 30px
+        margin-bottom: 20px
+
+.manufacturer
+    width: 100%
+    height: 1740px
+    background: url("../image/main-back.webp") 0 0/ auto 1740px no-repeat
+    @include _979
+        height: 758px
+        background: url("../image/main-back.webp") 0 0/ auto 768px no-repeat
+    
+    &__inner
+        padding-top: 60px
+        @include _979
+            padding-top: 100px
+    &__title
+        font-family: Roboto
+        font-weight: bold
+        font-size: 46px
+        line-height: 42px
+        text-align: center
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-color: #2AA5A0
+        background-image: linear-gradient(180deg, #F9E994 0%, #537D13 56.25%, #483C08 100%)
+        @include _979
+            margin: 30px auto 0px
+            font-size: 52px
+            line-height: 61px
+    &__img 
+        width: auto
+    &__img-padding
+        padding: 24px 0px 24px    
+    &__img-size
+        padding: 14px 0px 14px 
+
+    &__blocks
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include _979
+            flex-direction: row
+            justify-content: space-around
+    &__block
+        margin-top: 62px
+        width: 305px
+        width: 90%
+        height: 439px
+        background: #F6E791
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25)
+        border-radius: 20px
+        text-align: center
+        @include _768
+            width: 50%
+        @include _979
+            width: 305px
+    &__about
+        width: 275px
+        width: 90%
+        height: 211px
+        background: rgba(161, 211, 55, 0.4)
+        border-radius: 20px
+        margin: 0 auto 14px
+        @include _979
+            width: 275px
+    &__about-title
+        font-family: Roboto
+        font-weight: bold
+        font-size: 22px
+        line-height: 26px
+        color: #FFFFFF
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+        padding-top: 14px
+    &__about-text
+        font-family: Roboto
+        font-size: 18px
+        line-height: 21px
+        text-align: center
+        color: #483C08
+        padding: 20px 16px 26px
+.result
+    width: 100%
+    height: 1450px
+    background: url("../image/footer-back.webp") 0 0/ auto 1450px no-repeat
+    @include _350
+        height: 1250px
+        background: url("../image/footer-back.webp") 0 0/ auto 1250px no-repeat
+    @include _768
+        height: 1180px
+        background: url("../image/footer-back.webp") 0 0/ auto 1180px no-repeat
+    @include _979
+        height: 880px
+        background: url("../image/footer-back.webp") 0 0/ auto 880px no-repeat
+    @include _1170
+        height: 768px
+        background: url("../image/footer-back.webp") 0 0/ auto 768px no-repeat
+    &__title
+        font-family: Roboto
+        font-weight: bold
+        font-size: 44px
+        line-height: 40px
+        text-align: center
+        color: #537D13
+        padding-top: 50px
+        @include _350
+            line-height: 44px
+            font-size: 46px
+        @include _979
+            line-height: 61px
+            font-size: 52px
+            padding-top: 104px
+    &__arrow
+        width: 90%
+        border: 10px solid #D4DF6D
+        box-sizing: border-box
+        border-radius: 10px
+        margin: 30px auto 0px
+        position: relative
+        @include _768
+            width: 50%
+        @include _979
+            max-width: 670px
+            border: 20px solid #D4DF6D
+            border-right: none 
+            right: 66px
+            top: 7px
+    &__arrow:after
+        @include _979
+            content: ""
+            left: 84%
+            position: absolute
+            top: 20%
+            background: #D4DF6D
+            width: 235px
+            height: 20px
+            transform: rotate(63deg)
+        @include _1170
+            content: ""
+            left: 89%
+            position: absolute
+            top: 20%
+            background: #D4DF6D
+            width: 200px
+            height: 20px
+            transform: rotate(63deg)
+
+    &__arrow:before
+        @include _979
+            content: ""
+            left: 80%
+            position: absolute
+            top: 71%
+            background: #D4DF6D
+            width: 270px
+            height: 20px
+            transform: rotate(113deg)
+        @include _1170
+            content: ""
+            left: 88%   
+            position: absolute
+            top: 71%
+            background: #D4DF6D
+            width: 209px
+            height: 20px
+            transform: rotate(116deg)     
+    &__arrow-text
+        margin: 20px 
+        font-family: Roboto
+        font-size: 18px
+        line-height: 23px
+        color: #483C08
+
+    &__box
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: 25px
+        @include _979
+            display: flex
+            flex-direction: row
+
+    &__arrow
+        order: 2
+        @include _979
+            order: 1
+    &__image
+        order: 1
+        margin-top: 20px
+        @include _979
+            order: 2
